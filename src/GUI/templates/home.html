@@ -1,0 +1,44 @@
+<h1>Flask GUI Demo</h1>
+<p>Please provide inputs. </p>
+<form id = "myForm" action="/solve" method="POST">
+    Width: <input type="number" name = "w" required/> m </br>
+    <br>
+    Height: <input type="number" name = "h" required/> m </br>
+    <br>
+    Length: <input type="number" name = "l" required/> m </br>
+    <br>
+    Inlet Temperature: <input type="number" name = "T_in" required/> K </br>
+    <br>
+    Vol. Flow Rate: <input type="number" name = "V_dot" required/> m<sup>3</sup>/s </br>
+    <br>
+    Chip Heat: <input type="number" name = "q_chip" required/> W/m<sup>2</sup> </br>
+    <br>
+    Fluid: <select name="fluid_name" id="fluid_name">
+        <option value="air">Air</option>
+        <option value="liq2">Liquid 2</option>
+        <option value="liq3">Liquid 3</option>
+        <option value="liq4">Liquid 4</option>
+      </select>
+    <br>
+    <br>
+    <br>
+    <input type="submit" value = OK />
+    <input type="button" onclick="reset()" value="Reset">
+    <br>
+</form>
+
+<script>
+    function reset() {
+      document.getElementById("myForm").reset();
+    }
+</script>
+<br>
+
+
+{% if plot_url %}
+    <p> <b>  <font size="+1">Temperature of the Wall = {{result[0]}}K or {{result[1]}}&degC</font></b></p>
+    <img src= {{plot_url}} alt = "Chart cannot be displayed">
+{% endif %}
+
+
+

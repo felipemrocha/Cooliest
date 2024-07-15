@@ -1,0 +1,13 @@
+================================================
+    Variable (units)    |         Value         
+================================================
+ Width (m)              | 1
+ Height (m)             | 1
+ Inlet Length (m)       | .00001
+ Chip Length (m)        | .99998
+ Outlet Length (m)      | .00001
+ Inlet Temp (K)         | 300
+ Vol. Flow Rate (m^3/s) | 1
+ Chip Heat (W)          | 10
+ Fluid (-)              | air                   
+================================================

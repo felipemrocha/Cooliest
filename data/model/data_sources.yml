@@ -1,0 +1,4 @@
+fan_data:
+    fn: fan_specifications_rack_fans.csv
+    link: https://www.rackfans.com/product-specs.html
+    date_accessed: 3/31/2023
